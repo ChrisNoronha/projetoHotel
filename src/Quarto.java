@@ -12,10 +12,13 @@ public class Quarto extends Thread {
         this.chaveNaRecepcao = true;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+
     public synchronized boolean estaVago() {
         return hospedes.isEmpty() && chaveNaRecepcao;
     }
-
     // Métodos para adicionar/remover hóspedes e gerenciar a chave na recepção
 
     @Override

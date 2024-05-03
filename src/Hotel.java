@@ -10,8 +10,11 @@ public class Hotel {
     public Hotel(int numQuartos) {
         quartos = new ArrayList<>();
         filaEspera = new ArrayBlockingQueue<>(10);
-        for (int i = 0; i < numQuartos; i++) {
-            quartos.add(new Quarto(i));
+        for (int i = 1; i <= numQuartos; i++) {
+            Quarto quarto = new Quarto(i);
+            quartos.add(quarto);
+            quarto.start(); // Inicia a thread do quarto
+            System.out.println("Quarto número " + i + " foi criado.");
         }
     }
 

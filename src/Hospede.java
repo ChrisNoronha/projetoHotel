@@ -8,6 +8,10 @@ public class Hospede extends Thread {
         this.hotel = hotel;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     @Override
     public void run() {
         try {
