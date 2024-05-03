@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Quarto {
+public class Quarto extends Thread {
     private int numero;
     private List<Hospede> hospedes;
     private boolean chaveNaRecepcao;
@@ -17,4 +17,11 @@ public class Quarto {
     }
 
     // Métodos para adicionar/remover hóspedes e gerenciar a chave na recepção
+
+    @Override
+    public void run() {
+        while (true) {
+            // Lógica para o quarto, como limpeza após a saída dos hóspedes
+        }
+    }
 }
